@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <h1>Pomodoro Timer</h1>
+    <p id="status">Parado</p>
+
+    <p id="count">00:00</p>
+    
+    <input type="text" id="inputTema" placeholder="Assunto de estudo">
+    <div class="inputs-time">
+      <input type="number" id="inputEstudo" placeholder="Minutos de estudo" min="1" value="25">
+      <input type="number" id="inputPausa" placeholder="Minutos de pausa" min="1" value="5">
+    </div>
+    
+    <div class="buttons">
+      <button id="btnPlay" onclick="play()">▶ Play</button>
+      <button id="btnPause" onclick="pause()" style="display: none;">⏸ Pause</button>
+      <button id="btnStop" onclick="stop()" style="display: none;">⏹ Stop</button>
+    </div>
+    <br>
+    
+    <h2>Histórico</h2>
+    <ul id="historico"></ul>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
